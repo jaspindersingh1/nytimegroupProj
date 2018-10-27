@@ -1,4 +1,3 @@
-var key = "b4406f678e714d76b46b1198cc1e190b"
 
 // The search var
 var search = "";
@@ -19,5 +18,11 @@ $.ajax({
   method: "GET"
 }).done(function(result) {
   console.log(result);
+  $(".subButton").on("click", function () {
+    // In this case, the "this" keyword refers to the button that was clicked
+    $(this).search = $("#InputTerms").append("#articles")
+    $(this).startyear = $("#InputYear").append("#articles")
+    $(this).endyear = $("#InputEndYear").append("#articles")
+});
 
 });
